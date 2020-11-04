@@ -27,7 +27,7 @@ URL=`curl -s https://healthchecks.io/api/v1/checks/  -H "X-Api-Key: $API_KEY" -d
 
 echo $URL
 
-#Write the script thats run every minute
+# Write the script thats run every minute
 /bin/cat <<EOF >$HC_FILE
 #!/bin/bash
 # This file pings https://healthchecks.io/
@@ -42,7 +42,7 @@ EOF
 # Give that file x-permissions
 chmod a+x $HC_FILE
 
-#Write the .plist file containing the job definition
+# Write the .plist file containing the job definition
 /bin/cat <<EOF >$LA_FILE
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -60,7 +60,9 @@ chmod a+x $HC_FILE
 </plist>
 EOF
 
-#Load the job
+# Load the job
 launchctl load -w $HOME/Library/LaunchAgents/local.healthchecks_service.plist
 
+# Open the checks webpage
+open $URL
 exit 0
