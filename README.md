@@ -1,7 +1,6 @@
 # hc_check_maker_macos
 ## Script to create a https://healthchecks.io check on macOS
-Requires jq, https://stedolan.github.io/jq/
-
+Requires jq, https://stedolan.github.io/jq/ 
 Your API-key from healthchecks.io
 
 Usage: 
