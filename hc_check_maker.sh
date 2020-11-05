@@ -24,6 +24,7 @@ PAYLOAD='{"name": "'`hostname`'", "timeout": 60, "grace": 300, "unique": ["name"
 # Create the check if it does not exist.
 # Grab the ping_url from JSON response using the jq utility:
 URL=`curl -s https://healthchecks.io/api/v1/checks/  -H "X-Api-Key: $API_KEY" -d "$PAYLOAD"  | jq -r .ping_url`
+URL_WWW=https://healthchecks.io/checks/${URL##*/}
 
 echo $URL
 
@@ -63,6 +64,8 @@ EOF
 # Load the job
 launchctl load -w $HOME/Library/LaunchAgents/local.healthchecks_service.plist
 
+
+
 # Open the checks webpage
-open $URL
+open $URLWWW
 exit 0
