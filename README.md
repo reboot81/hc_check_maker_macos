@@ -12,7 +12,7 @@ Usage:
 
 Enter your API key and press enter
 
-Your browser will open the checks webpage, withing 60s you should see a ping.  
+Your browser will open the checks webpage, within 60s you should see a ping.  
 Enable the notifications of your choosing.
 
 Creates the following files:  
