@@ -18,5 +18,5 @@ Your browser will open the checks webpage, withing 60s you should see a ping.
 Enable the notifications of your choosing.
 
 Creates the following files:  
-`~/Library/LaunchAgents/local.healthchecks_service.plist`  
-`/usr/local/bin/healthchecks_service.sh`
+* `~/Library/LaunchAgents/local.healthchecks_service.plist`  
+* `/usr/local/bin/healthchecks_service.sh`
