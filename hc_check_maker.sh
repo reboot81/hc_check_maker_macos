@@ -19,7 +19,7 @@ LA_FILE="$HOME/Library/LaunchAgents/local.healthchecks_service.plist"
 HC_FILE="/usr/local/bin/healthchecks_service.sh"
 
 # Check's parameters. This example uses system's hostname for check's name.
-PAYLOAD='{"name": "'`hostname`'", "timeout": 60, "grace": 300, "unique": ["name"]}'
+PAYLOAD='{"name": "'`hostname`'", "tags" = "macOS", "desc" = "Created with hc_check_maker", "timeout": 60, "grace": 300, "unique": ["name"]}'
 
 # Create the check if it does not exist.
 # Grab the ping_url from JSON response using the jq utility:
