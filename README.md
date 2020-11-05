@@ -4,11 +4,11 @@ Requires:
 * jq, https://stedolan.github.io/jq/  
 * Your API-key from healthchecks.io
 
-Usage:
-`git clone https://github.com/reboot81/hc_check_maker_macos.git  
-cd hc_check_maker_macos  
-chmod a+x hc_check_maker.sh  
-./hc_check_maker.sh`
+Usage:  
+`git clone https://github.com/reboot81/hc_check_maker_macos.git`  
+`cd hc_check_maker_macos`  
+`chmod a+x hc_check_maker.sh`  
+`./hc_check_maker.sh`
 
 Enter your API key and press enter
 
